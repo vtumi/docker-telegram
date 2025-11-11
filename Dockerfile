@@ -11,8 +11,8 @@ RUN \
   echo "**** install packages ****" && \
   apt-get update && \
   apt-get install -y --no-install-recommends xz-utils libatk1.0-0 libatk-bridge2.0-0 libatomic1 libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-render-util0 libxcb-keysyms1 desktop-file-utils fonts-noto-cjk-extra && \
-  curl -o /tmp/telegram.tar.xz https://td.telegram.org/tlinux/tsetup.6.2.4.tar.xz && \
-  tar xvfJ /tmp/telegram.tar.xz && \
+  curl -o -L /tmp/telegram.tar.xz https://telegram.org/dl/desktop/linux && \
+  tar xvfJ /tmp/telegram.tar.xz -C /tmp && \
   mv /tmp/Telegram/Telegram /opt/telegram/telegram && \
   ln -s /opt/telegram/telegram /usr/bin/telegram && \
   rm -rf /tmp/{telegram.tar.xz,Telegram} && \
