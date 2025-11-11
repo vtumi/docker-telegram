@@ -10,7 +10,7 @@ RUN \
   curl -o /opt/telegram/telegram.png https://telegram.org/img/favicon-32x32.png && \
   echo "**** install packages ****" && \
   apt-get update && \
-  apt-get install -y --no-install-recommends xz-utils libatk1.0-0 libatk-bridge2.0-0 libatomic1 libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-render-util0 libxcb-keysyms1 desktop-file-utils fonts-noto-cjk-extra && \
+  apt-get install -y --no-install-recommends xz-utils libgtk-3-0 desktop-file-utils fonts-noto-cjk-extra && \
   curl -L -o /tmp/telegram.tar.xz https://telegram.org/dl/desktop/linux && \
   tar xvfJ /tmp/telegram.tar.xz -C /tmp && \
   mv /tmp/Telegram/Telegram /opt/telegram/telegram && \
