@@ -17,7 +17,6 @@ RUN \
   ln -s /opt/telegram/telegram /usr/bin/telegram && \
   rm -rf /tmp/{telegram.tar.xz,Telegram} && \
   fc-cache -fv && \
-  sed -i "s/UI.initSetting('enable_ime', false)/UI.initSetting('enable_ime', true)/" /usr/local/share/kasmvnc/www/dist/main.bundle.js && \
   echo "**** cleanup ****" && \
   apt-get autoclean && \
   rm -rf \
