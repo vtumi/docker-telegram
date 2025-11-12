@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 <menu id="root-menu" label="MENU">
-<item label="telegram" icon="/opt/telegram/telegram.png"><action name="Execute"><command>/usr/bin/telegram</command></action></item>
+<item label="telegram" icon="/usr/share/icons/hicolor/32x32/apps/telegram.png"><action name="Execute"><command>/usr/bin/telegram</command></action></item>
 </menu>
 </openbox_menu>
