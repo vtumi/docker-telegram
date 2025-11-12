@@ -5,12 +5,12 @@ ENV TITLE=Telegram
 
 RUN \
   echo "**** add icon ****" && \
-  mkdir /opt/telegram && \
-  curl -o /kclient/public/favicon.ico https://telegram.org/img/favicon.ico && \
-  curl -o /opt/telegram/telegram.png https://telegram.org/img/favicon-32x32.png && \
+  curl -o /usr/share/icons/hicolor/32x32/apps/telegram.png https://telegram.org/img/favicon-32x32.png && \
+  cp /usr/share/icons/hicolor/32x32/apps/telegram.png /usr/share/selkies/www/icon.png && \
   echo "**** install packages ****" && \
   apt-get update && \
   apt-get install -y --no-install-recommends xz-utils libgtk-3-0 desktop-file-utils fonts-noto-cjk-extra && \
+  mkdir /opt/telegram && \
   curl -L -o /tmp/telegram.tar.xz https://telegram.org/dl/desktop/linux && \
   tar xvfJ /tmp/telegram.tar.xz -C /tmp && \
   mv /tmp/Telegram/Telegram /opt/telegram/telegram && \
