@@ -15,7 +15,6 @@ RUN \
   tar xvfJ /tmp/telegram.tar.xz -C /tmp && \
   mv /tmp/Telegram/Telegram /opt/telegram/telegram && \
   ln -s /opt/telegram/telegram /usr/bin/telegram && \
-  rm -rf /tmp/{telegram.tar.xz,Telegram} && \
   fc-cache -fv && \
   echo "**** cleanup ****" && \
   apt-get autoclean && \
